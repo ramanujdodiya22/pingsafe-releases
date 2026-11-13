@@ -2,6 +2,8 @@
 
 Test builds of PingSafe for Android. This repository holds only the APK files; the app checks it for updates.
 
+**Website, install steps and FAQ:** https://pingsafeapp.github.io
+
 **Download the newest version:**
 https://github.com/ramanujdodiya22/pingsafe-releases/releases/latest/download/PingSafe.apk
 
