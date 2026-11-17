@@ -51,7 +51,7 @@ PingSafe does the opposite. It **asks instead of tracks**:
 
 - **You tap Ping.** That's the question: "Where are you? Are you okay?"
 - **Their phone wakes up** and answers once: the place, battery, whether it's charging, the network and the time.
-- **Then it goes back to sleep.** Nothing runs in between. There is no map that follows anyone around.
+- **Then it goes back to sleep.** Location is never read in between. There is no map that follows anyone around.
 
 Two phones take part. The one that asks is the **checker**. The one that answers is the **sharer**. Both install PingSafe.
 
@@ -109,7 +109,7 @@ PingSafe is built so nobody feels watched.
 | Promise | How it's kept |
 |---|---|
 | **They say yes first** | Nobody is paired until the sharer approves the request on their own phone. |
-| **No live tracking** | Location is read only when someone asks (or at the low-battery level the sharer picked). Nothing runs in the background in between. |
+| **No live tracking** | Location is read only when someone asks (or at the low-battery level the sharer picked). It is never read in between. The only background task is the optional low-battery alert, which checks the battery level, not the location, about every 15 minutes. |
 | **They always know** | Every time location is shared, the sharer's phone shows it. |
 | **Stop in one tap** | Either person can unpair at any time. Auto mode and the low-battery alert turn off in one tap. |
 | **No history on the server** | The server keeps only the **latest** answer, for about an hour, so the checker can reopen it. Records kept for speed stats contain **no coordinates**. |
@@ -145,8 +145,9 @@ Yes. No account, no ads, nothing to buy.
 <details>
 <summary><b>Does it drain the battery?</b></summary>
 
-It's designed not to. Nothing runs in the background. The sharer's phone sleeps until someone asks, reads its location
-once, and sleeps again. The low-battery alert, if turned on, checks the battery about every 15 minutes.
+It's designed to use very little. PingSafe never tracks location in the background. The sharer's phone sleeps until
+someone asks, reads its location once, and sleeps again. The only background task is the low-battery alert, and only
+if it's turned on: it checks the battery level (not the location) about every 15 minutes.
 I'm still measuring this on real phones; see [What I measured so far](#what-i-measured-so-far).
 </details>
 
